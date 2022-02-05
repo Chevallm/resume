@@ -1,4 +1,6 @@
 @import 'colors';
+@import 'card';
+@import 'utils';
 
 @font-face {
     font-family: 'Outfit';
@@ -10,4 +12,9 @@ html, body {
     height: 100%;
     background-color: $background-color;
     font-family: 'Outfit';
+    color: $text-color-main;
+}
+
+.page {
+    height: 100vh;
 }
