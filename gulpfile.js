@@ -13,26 +13,26 @@ gulp.task('serve', () => {
 
 gulp.task('sass', () => {
     return gulp.src('src/scss/style.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.stream());
+        .pipe(sass())
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('html', () => {
     return gulp.src('src/index.html')
-    .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('images', () => {
     return gulp.src('src/images/*')
-    .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', () => {
     return gulp.src('src/fonts/*')
-    .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('dist/fonts'));
 });
 
 
 
-gulp.task('default', () => gulp.parallel('html', 'sass', 'fonts', 'images'));
+gulp.task('default', () => gulp.series('html', 'sass', 'fonts', 'images'));

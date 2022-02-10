@@ -21,7 +21,6 @@
     &-subtitle {
         font-weight: 700;
         font-size: 20px;
-        color: $text-color-secondary;
     }
 
     &-image {
@@ -30,5 +29,9 @@
             min-width: 50%;
             object-fit: cover;
         }
+    }
+
+    &-content {
+        padding: 10px;
     }
 }
